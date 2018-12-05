@@ -13,6 +13,7 @@
 		FCB35A1F21B468F800E7CCF9 /* MarketMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCB35A1D21B468F800E7CCF9 /* MarketMaker.xcdatamodeld */; };
 		FCB35A2121B468F900E7CCF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB35A2021B468F900E7CCF9 /* Assets.xcassets */; };
 		FCB35A2421B468F900E7CCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB35A2221B468F900E7CCF9 /* LaunchScreen.storyboard */; };
+		FCB35A2C21B4745A00E7CCF9 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB35A2B21B4745A00E7CCF9 /* MarketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCB35A2021B468F900E7CCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCB35A2321B468F900E7CCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCB35A2521B468F900E7CCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB35A2B21B4745A00E7CCF9 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				FCB35A1621B468F800E7CCF9 /* AppDelegate.swift */,
 				FCB35A1821B468F800E7CCF9 /* ViewController.swift */,
+				FCB35A2B21B4745A00E7CCF9 /* MarketViewController.swift */,
 				FCB35A1A21B468F800E7CCF9 /* Main.storyboard */,
 				FCB35A2021B468F900E7CCF9 /* Assets.xcassets */,
 				FCB35A2221B468F900E7CCF9 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB35A2C21B4745A00E7CCF9 /* MarketViewController.swift in Sources */,
 				FCB35A1921B468F800E7CCF9 /* ViewController.swift in Sources */,
 				FCB35A1721B468F800E7CCF9 /* AppDelegate.swift in Sources */,
 				FCB35A1F21B468F800E7CCF9 /* MarketMaker.xcdatamodeld in Sources */,
