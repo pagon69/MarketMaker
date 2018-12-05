@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import SwiftyJSON
+import SVProgressHUD
+
 
 class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: my outlets
     @IBOutlet weak var myTableViewOutlet: UITableView!
     
-    let myData = ["test1", "second", "third", "fourth", "fifth", "sixth"]
     
+    
+    //MARK: my global variables
+    let myData = ["test1", "second", "third", "fourth", "fifth", "sixth"]
+   
+    var marketURL = "https://api.iextrading.com/1.0/market"
+    
+    var marketDataItem = MarketData()
+    var marketDataArray = [MarketData()]
+    
+    //MARK: MY TABLE VIEW methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myData.count
+        return marketDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,9 +39,9 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = myTableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MarketTableViewCell
         
       //  cell.backgroundView?.backgroundColor = UIColor.gray
-        cell.shortOutlet.text = myData[indexPath.row]
-        cell.longOutlet.text = "text for long data"
-        cell.volumeOutlet.text = "12338753487543 "
+        cell.shortOutlet.text = marketDataArray[indexPath.row].symbolName
+        cell.longOutlet.text = marketDataArray[indexPath.row].venueName
+        cell.volumeOutlet.text = marketDataArray[indexPath.row].volume
         cell.changeOutlet.text = "+3.45"
        
         
@@ -52,11 +67,62 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         myTableViewOutlet.delegate = self
         myTableViewOutlet.dataSource = self
         
+        SVProgressHUD.show()
+        
+        apiCalls(url: marketURL)
+        
 
     }
     
+    
+    
+    
+    
+    
+    
+    func apiCalls(url: String){
+        
+        Alamofire.request(url, method: .get) //parameters can be placed after the get
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    
+                    let returnedStockData : JSON = JSON(response.result.value!)
+                    SVProgressHUD.dismiss()
+                    self.processMarketData(jsonData: returnedStockData)
+                    
+                }else{
+                    
+                    print("somthing went wrong: \(String(describing: response.result.error))")
+                    
+                }
+        }
+        
+    }
+    
+    
+    func updateUIComponents() {
+        
+        myTableViewOutlet.reloadData()
+        
+    }
+    
 
-
+    func processMarketData(jsonData: JSON) {
+        
+        for eachItem in jsonData.arrayValue{
+            
+            let myMarketData = MarketData()
+            myMarketData.venueName = eachItem["venueName"].stringValue
+            myMarketData.symbolName = eachItem["mic"].stringValue
+            myMarketData.volume = eachItem["volume"].stringValue
+            
+            marketDataArray.append(myMarketData)
+        }
+        
+        marketDataArray.remove(at: 0)
+        updateUIComponents()
+        
+    }
     
 
 }
