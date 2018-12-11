@@ -50,11 +50,30 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         cell.changeViewOutlet.backgroundColor = UIColor.green
         cell.changeViewOutlet.alpha = 0.5
         
+      
+        
         return cell
     }
     
-    
-    
+    //use to do things to the selected Cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //used to indicate which cell was selected
+        print(indexPath.row)
+        print(marketDataArray[indexPath.row].symbolName)
+        
+        //use the below to get details on a market stock?
+       // tableView.cellForRow(at: indexPath)?.accessoryType = .detailDisclosureButton
+        
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .detailDisclosureButton {
+              tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }else {
+              tableView.cellForRow(at: indexPath)?.accessoryType = .detailDisclosureButton
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
     
     
     
@@ -110,6 +129,8 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     func processMarketData(jsonData: JSON) {
         
         for eachItem in jsonData.arrayValue{
+            
+            print(eachItem)
             
             let myMarketData = MarketData()
             myMarketData.venueName = eachItem["venueName"].stringValue
