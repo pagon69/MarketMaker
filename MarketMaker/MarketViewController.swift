@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireImage
 import SwiftyJSON
 import SVProgressHUD
+import GoogleMobileAds
 
 
 class MarketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -18,6 +19,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: my outlets
     @IBOutlet weak var myTableViewOutlet: UITableView!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     
     
     //MARK: my global variables
@@ -85,6 +87,11 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         myTableViewOutlet.delegate = self
         myTableViewOutlet.dataSource = self
+        
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
         SVProgressHUD.show()
         
