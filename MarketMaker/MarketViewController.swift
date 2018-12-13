@@ -61,8 +61,8 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //used to indicate which cell was selected
-        print(indexPath.row)
-        print(marketDataArray[indexPath.row].symbolName)
+      //  print(indexPath.row)
+      //  print(marketDataArray[indexPath.row].symbolName)
         
         //use the below to get details on a market stock?
        // tableView.cellForRow(at: indexPath)?.accessoryType = .detailDisclosureButton
@@ -137,7 +137,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         for eachItem in jsonData.arrayValue{
             
-            print(eachItem)
+          //  print(eachItem)
             
             let myMarketData = MarketData()
             myMarketData.venueName = eachItem["venueName"].stringValue
