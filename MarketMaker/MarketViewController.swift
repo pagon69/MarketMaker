@@ -38,19 +38,24 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = myTableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MarketTableViewCell
+        let cell = myTableViewOutlet.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        
+        cell.detailTextLabel?.text = "Symbol:\(marketDataArray[indexPath.row].symbolName)  Vol:\(marketDataArray[indexPath.row].volume)  Chg: +3.4"
+        cell.textLabel?.text =  "\(marketDataArray[indexPath.row].venueName)"
+        
         
       //  cell.backgroundView?.backgroundColor = UIColor.gray
-        cell.shortOutlet.text = marketDataArray[indexPath.row].symbolName
-        cell.longOutlet.text = marketDataArray[indexPath.row].venueName
-        cell.volumeOutlet.text = marketDataArray[indexPath.row].volume
-        cell.changeOutlet.text = "+3.45"
+       // cell.shortOutlet.text = marketDataArray[indexPath.row].symbolName
+        //cell.longOutlet.text = marketDataArray[indexPath.row].venueName
+        //cell.volumeOutlet.text = marketDataArray[indexPath.row].volume
+        //cell.changeOutlet.text = "+3.45"
        
         
-        cell.changeOutlet.textColor = UIColor.black
+        //cell.changeOutlet.textColor = UIColor.black
         
-        cell.changeViewOutlet.backgroundColor = UIColor.green
-        cell.changeViewOutlet.alpha = 0.5
+       // cell.changeViewOutlet.backgroundColor = UIColor.green
+        //cell.changeViewOutlet.alpha = 0.5
         
       
         

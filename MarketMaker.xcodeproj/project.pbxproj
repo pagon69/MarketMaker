@@ -11,6 +11,8 @@
 		FC58287721C0950A002D8B3E /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58287621C0950A002D8B3E /* CryptoViewController.swift */; };
 		FC58287921C0A37F002D8B3E /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58287821C0A37F002D8B3E /* CryptoData.swift */; };
 		FC72303821C1D9BF004F8527 /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72303721C1D9BF004F8527 /* WatchListViewController.swift */; };
+		FC72303A21C352CE004F8527 /* IPOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72303921C352CE004F8527 /* IPOViewController.swift */; };
+		FC72303C21C353AD004F8527 /* IPOObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72303B21C353AD004F8527 /* IPOObject.swift */; };
 		FCB35A1721B468F800E7CCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB35A1621B468F800E7CCF9 /* AppDelegate.swift */; };
 		FCB35A1921B468F800E7CCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB35A1821B468F800E7CCF9 /* ViewController.swift */; };
 		FCB35A1C21B468F800E7CCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB35A1A21B468F800E7CCF9 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		FC58287621C0950A002D8B3E /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		FC58287821C0A37F002D8B3E /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 		FC72303721C1D9BF004F8527 /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		FC72303921C352CE004F8527 /* IPOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPOViewController.swift; sourceTree = "<group>"; };
+		FC72303B21C353AD004F8527 /* IPOObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPOObject.swift; sourceTree = "<group>"; };
 		FCB35A1321B468F800E7CCF9 /* MarketMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB35A1621B468F800E7CCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB35A1821B468F800E7CCF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				FCB35A1821B468F800E7CCF9 /* ViewController.swift */,
 				FCB35A2B21B4745A00E7CCF9 /* MarketViewController.swift */,
 				FCB35A1A21B468F800E7CCF9 /* Main.storyboard */,
+				FC72303B21C353AD004F8527 /* IPOObject.swift */,
+				FC72303921C352CE004F8527 /* IPOViewController.swift */,
 				FC72303721C1D9BF004F8527 /* WatchListViewController.swift */,
 				FC58287821C0A37F002D8B3E /* CryptoData.swift */,
 				FC58287621C0950A002D8B3E /* CryptoViewController.swift */,
@@ -245,7 +251,9 @@
 				FCB35A2C21B4745A00E7CCF9 /* MarketViewController.swift in Sources */,
 				FCB35A1921B468F800E7CCF9 /* ViewController.swift in Sources */,
 				FC72303821C1D9BF004F8527 /* WatchListViewController.swift in Sources */,
+				FC72303A21C352CE004F8527 /* IPOViewController.swift in Sources */,
 				FCB35A1721B468F800E7CCF9 /* AppDelegate.swift in Sources */,
+				FC72303C21C353AD004F8527 /* IPOObject.swift in Sources */,
 				FC58287921C0A37F002D8B3E /* CryptoData.swift in Sources */,
 				FCB35A1F21B468F800E7CCF9 /* MarketMaker.xcdatamodeld in Sources */,
 				FCB35A2E21B85FAE00E7CCF9 /* MarketData.swift in Sources */,
